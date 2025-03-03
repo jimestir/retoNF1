@@ -100,7 +100,10 @@ public class Start {
                     System.out.println("");
                     break;
                 case "0":
+                    System.out
+                            .println("-------------------------");
                     System.out.println("El programa ha finalizado");
+                    System.out.println("-------------------------");
                 default:
                     System.out.println("");
                     break;
@@ -109,7 +112,7 @@ public class Start {
                 System.out
                         .println(
                                 "---------------------------------------------------------------------------------------");
-                System.out.println("La opción elegida no existe.");
+                System.out.println("Opción errónea");
                 System.out
                         .println(
                                 "---------------------------------------------------------------------------------------");
@@ -118,45 +121,39 @@ public class Start {
     }
 
     public static float addition(float num1, float num2) {
-        float result = num1 + num2;
-        return result;
+        return num1 + num2;
     }
 
     public static float subtraction(float num1, float num2) {
-        float result = num1 - num2;
-        return result;
+        return num1 - num2;
     }
 
     public static float multiply(float num1, float num2) {
-        float result = num1 * num2;
-        return result;
+        return num1 * num2;
     }
 
     public static float divide(float num1, float num2) {
-        float result = num1 / num2;
-        return result;
+        return num1 / num2;
     }
 
     public static float greaterNumber(float num1, float num2, float num3) {
         float result = num1;
         for (int i = 3; i > 0; i--) {
-            if (result < num2) {
+            if (result < num2)
                 result = num2;
-            } else if (result < num3) {
+            else if (result < num3)
                 result = num3;
-                if (result < num2)
-                    result = num2;
-            }
+
         }
 
         return result;
     }
 
-    public static float factorial(float num) {
-        float result = num;
+    public static int factorial(int num) {
+        int result = num;
         if (num == 0)
             return 1;
-        for (float i = num; i > 1; i--) {
+        for (int i = num; i > 1; i--) {
             result *= (i - 1);
         }
         return result;
