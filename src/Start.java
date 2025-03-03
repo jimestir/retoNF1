@@ -29,7 +29,8 @@ public class Start {
                     System.out.println();
                     System.out.print("Introduzca el segundo número flotante a sumar: ");
                     float sumNum2 = valueScanner.nextFloat();
-                    System.out.println("La suma de " + sumNum1 + " y " + sumNum2 + " es " + addition(sumNum1, sumNum2));
+                    System.out.println(
+                            "La suma de " + sumNum1 + " y " + sumNum2 + " es " + Operations.addition(sumNum1, sumNum2));
                     System.out.println("");
                     break;
 
@@ -40,7 +41,8 @@ public class Start {
                     System.out.print("Introduzca el segundo número flotante a restar: ");
                     float subNum2 = valueScanner.nextFloat();
                     System.out.println(
-                            "La resta de " + subNum1 + " y " + subNum2 + " es " + subtraction(subNum1, subNum2));
+                            "La resta de " + subNum1 + " y " + subNum2 + " es "
+                                    + Operations.subtraction(subNum1, subNum2));
                     System.out.println("");
                     break;
 
@@ -52,7 +54,7 @@ public class Start {
                     float multNum2 = valueScanner.nextFloat();
                     System.out.println(
                             "La multiplicación de " + multNum1 + " y " + multNum2 + " es "
-                                    + multiply(multNum1, multNum2));
+                                    + Operations.multiply(multNum1, multNum2));
                     System.out.println("");
                     break;
 
@@ -69,7 +71,7 @@ public class Start {
                     }
                     System.out.println(
                             "La división de " + diviNum1 + " y " + diviNum2 + " es "
-                                    + divide(diviNum1, diviNum2));
+                                    + Operations.divide(diviNum1, diviNum2));
                     System.out.println("");
                     break;
 
@@ -82,9 +84,8 @@ public class Start {
                     System.out.println();
                     System.out.print("Introduzca el tercero número flotante de los 3: ");
                     float greatNum3 = valueScanner.nextFloat();
-                    System.out.println();
-                    System.out.println("El número " + greaterNumber(greatNum1, greatNum2, greatNum3)
-                            + " es el mayor de los 3 números.");
+                    System.out.println("El número " + Operations.greaterNumber(greatNum1, greatNum2, greatNum3)
+                            + " es el mayor de los 3 números");
                     System.out.println("");
                     break;
 
@@ -93,7 +94,7 @@ public class Start {
                     int factNum = valueScanner.nextInt();
                     System.out.print("");
                     if (factNum >= 0)
-                        System.out.println("El factorial de " + factNum + " es " + factorial(factNum));
+                        System.out.println("El factorial de " + factNum + " es " + Operations.factorial(factNum));
                     else {
                         System.err.print("Error valor inferio a 0, introduzca un valor superior a 0");
                     }
@@ -120,44 +121,4 @@ public class Start {
         } while (valueDisplay != 0);
         valueScanner.close();
     }
-
-    public static float addition(float num1, float num2) {
-        return num1 + num2;
-    }
-
-    public static float subtraction(float num1, float num2) {
-        return num1 - num2;
-    }
-
-    public static float multiply(float num1, float num2) {
-        return num1 * num2;
-    }
-
-    public static float divide(float num1, float num2) {
-        return num1 / num2;
-    }
-
-    public static float greaterNumber(float num1, float num2, float num3) {
-        float result = num1;
-        for (int i = 3; i > 0; i--) {
-            if (result < num2)
-                result = num2;
-            else if (result < num3)
-                result = num3;
-
-        }
-
-        return result;
-    }
-
-    public static int factorial(int num) {
-        int result = num;
-        if (num == 0)
-            return 1;
-        for (int i = num; i > 1; i--) {
-            result *= (i - 1);
-        }
-        return result;
-    }
-
 }
