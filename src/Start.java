@@ -3,11 +3,12 @@ import java.util.Scanner;
 public class Start {
     public static void main(String[] args) throws Exception {
         int valueDisplay;
+        Scanner valueScanner = new Scanner(System.in);
         System.out.println("********************************************************");
         System.out.println("************ CALCULADORA DE CALCULATOR S.A *************");
         System.out.println("********************************************************");
-        do {
 
+        do {
             System.out.println("Introduzca una opción del menú:");
             System.out.println("1. Función Sumar");
             System.out.println("2. Función Restar");
@@ -18,7 +19,6 @@ public class Start {
             System.out.println("0. Salir");
             System.out.print("Introduzca una opción: ");
 
-            Scanner valueScanner = new Scanner(System.in);
             valueDisplay = valueScanner.nextInt();
             System.out.println("");
 
@@ -118,6 +118,7 @@ public class Start {
                                 "---------------------------------------------------------------------------------------");
             }
         } while (valueDisplay != 0);
+        valueScanner.close();
     }
 
     public static float addition(float num1, float num2) {
